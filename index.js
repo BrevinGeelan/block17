@@ -31,11 +31,7 @@ const isSeasonal = (drink) => {
 const SeasonalDrink = coffeeMenu.filter(isSeasonal);
 console.table(SeasonalDrink);
 
-const SeasonDrinkName = (drink) => {
-if (drink.seasonal == true){
-    return drink.name
-}
-}
-const Pls = coffeeMenu.map(SeasonDrinkName);
-
+const SeasonDrinkName = coffeeMenu
+.filter(drink => drink.seasonal)
+.map(drink => drink.name);
 console.log(SeasonDrinkName + " is made with Imported beans!");
