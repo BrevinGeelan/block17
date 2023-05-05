@@ -40,7 +40,7 @@ const coffeeMenu = [
     },
     {
         name: "iced coffee",
-        price: "6",
+        price: 6,
         seasonal: false,
     },
     {

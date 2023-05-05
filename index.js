@@ -19,9 +19,10 @@ const evenPrice = coffeeMenu.filter(evenNum);
 console.table(evenPrice);
 
 const initialVal = 0;
-const oneOfAll = (price) => coffeeMenu.reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    initialVal);
+const oneOfAll = coffeeMenu.reduce(
+    (accumulator, currentValue) => {
+       return accumulator + currentValue.price;
+    }, initialVal);
 console.log(oneOfAll);
 
 const isSeasonal = (drink) => {
@@ -31,7 +32,7 @@ const SeasonalDrink = coffeeMenu.filter(isSeasonal);
 console.table(SeasonalDrink);
 
 const SeasonDrinkName = (drink) => {
-if (drink.seasonal === true){
+if (drink.seasonal == true){
     return drink.name
 }
 }
